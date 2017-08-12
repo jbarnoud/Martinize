@@ -229,6 +229,7 @@ class Topology:
         self.posres      = CategorizedList()
         self.sequence    = []
         self.secstruc    = ""
+        self.raw_secstruct = ""
         # Okay, this is sort of funny; we will add a
         #   #define mapping virtual_sitesn
         # to the topology file, followed by a header
@@ -309,8 +310,16 @@ class Topology:
             out += [
                 '; Sequence:',
                 '; ' + ''.join([mapper.AA321.get(AA) for AA in self.sequence]),
-                '; Secondary Structure:',
+                '; Secondary Structure used internally:',
                 '; ' + self.secstruc,
+                ]
+            if self.raw_secstruct:
+                out += [
+                    '; You can provide the following sring to the -ss option',
+                    '; to obtain the same secondary structure:',
+                    '; ' + self.raw_secstruct.replace(' ', '~'),
+                    '; If you have multiple chains, you would have to',
+                    '; concatenate the secondary structure strings.',
                 ]
 
         # Do not print a molecule name when multiscaling
@@ -443,6 +452,7 @@ class Topology:
             mapping       = mapping or chain.mapping
             multi         = self.options['multi'] or chain.multiscale
             self.secstruc = chain.sstypes or len(chain)*"C"
+            self.raw_secstruct = chain.ss or ""
             self.sequence = chain.sequence
             # If anything hints towards multiscaling, do multiscaling
             self.multiscale = self.multiscale or chain.multiscale or multi
