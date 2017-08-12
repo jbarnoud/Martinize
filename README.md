@@ -33,19 +33,25 @@ Secondary structure
 The secondary structure plays a central role in the assignment of atom
 types and bonded interactions in MARTINI. Martinize allows
 specification of the secondary structure as a string (-ss), or as a
-file containing a specification in GROMACS' ssdump format
-(-ss). Alternatively, DSSP can be used for an on-the-fly assignment of
-the secondary structure. For this, the option -dssp has to be used
-giving the location of the executable as the argument.
+DSSP output file (-ss). Alternatively, DSSP can be used for an on-the-fly
+assignment of the secondary structure. For this, the option -dssp has to be
+used giving the location of the executable as the argument.
+
 The option -collagen will set the whole structure to collagen. If this
 is not what you want (eg only part of the structure is collagen, you
 can give a secondary structure file/string (-ss) and specifiy collagen
 as "F". Parameters for collagen are taken from: Gautieri et al.,
 J. Chem. Theory Comput., 2010, 6, 1210-1218.
+
 With multimodel input files, the secondary structure as determined with
 DSSP will be averaged over the frames. In this case, a cutoff
 can be specified (-ssc) indicating the fraction of frames to match a
 certain secondary structure type for designation.
+
+When the secondary structure is provided as a string with the -ss option, the
+string uses the DSSP naming conventions and "~" for coil:
+<http://swift.cmbi.ru.nl/gv/dssp/>. In addition, "F" can be used for collagen
+parameters.
 
 Topology
 --------
