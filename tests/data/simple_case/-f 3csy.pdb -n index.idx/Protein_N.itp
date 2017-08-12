@@ -3,8 +3,13 @@
 ; Using the following options:  -f 3csy.pdb -n index.idx
 ; Sequence:
 ; EAIVNAQPKCNPNLHYWTTQGAAIGLAWIPYFGPAAEGIYTEGLMHNQDGLICGLRQLANETTQALQLFLRATTELRTFSILNRKAIDFLLQRWG
-; Secondary Structure:
+; Secondary Structure used internally:
 ; CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+; You can provide the following sring to the -ss option
+; to obtain the same secondary structure:
+; CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+; If you have multiple chains, you would have to
+; concatenate the secondary structure strings.
 
 [ moleculetype ]
 ; Name         Exclusions

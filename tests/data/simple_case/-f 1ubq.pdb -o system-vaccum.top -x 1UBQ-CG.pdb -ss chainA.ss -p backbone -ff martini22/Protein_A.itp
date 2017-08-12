@@ -3,8 +3,13 @@
 ; Using the following options:  -f 1ubq.pdb -o system-vaccum.top -x 1UBQ-CG.pdb -ss chainA.ss -p backbone -ff martini22
 ; Sequence:
 ; MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG
-; Secondary Structure:
+; Secondary Structure used internally:
 ; CEEEEEETTSCEEEEECCTTSC1111HHHH2222CCCCCCEEEEETTEECCTTSCTCCCTCCTTCEEEEEECCSCC
+; You can provide the following sring to the -ss option
+; to obtain the same secondary structure:
+; ~EEEEEETTS~EEEEE~~TTSBHHHHHHHHHHHH~~~GGGEEEEETTEE~~TTSBTGGGT~~TT~EEEEEE~~S~~
+; If you have multiple chains, you would have to
+; concatenate the secondary structure strings.
 
 [ moleculetype ]
 ; Name         Exclusions

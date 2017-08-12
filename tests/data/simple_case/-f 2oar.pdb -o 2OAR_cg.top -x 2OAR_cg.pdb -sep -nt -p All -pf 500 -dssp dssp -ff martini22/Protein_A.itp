@@ -3,8 +3,13 @@
 ; Using the following options:  -f 2oar.pdb -o 2OAR_cg.top -x 2OAR_cg.pdb -sep -nt -p All -pf 500 -dssp dssp -ff martini22
 ; Sequence:
 ; MLKGFKEFLARGNIVDLAVAVVIGTAFTALVTKFTDSIITPLINRIGVNAQSDVGILRIGIGGGQTIDLNVLLSAAINFFLIAFAVYFLVVLPYNTLRKKGEVEQPGDTQVVLLTEIRDLLAQTN
-; Secondary Structure:
+; Secondary Structure used internally:
 ; C1111H2222SC1111HHHHHHHHHHHHHH2222CCCCC1113222CCCCEEECCCCTTTCCSCEEEC1111HHHHHHHHH2222CCCCCC11112222TTCCCC1111HHHHHHHHHH2222TC
+; You can provide the following sring to the -ss option
+; to obtain the same secondary structure:
+; ~HHHHHHHHHS~HHHHHHHHHHHHHHHHHHHHHHIIIIIHHHHHHH~~~~EEE~~~~TTT~~S~EEE~HHHHHHHHHHHHHHHHHIIIIIIHHHHHHHHTT~~~~HHHHHHHHHHHHHHHHHHT~
+; If you have multiple chains, you would have to
+; concatenate the secondary structure strings.
 
 [ moleculetype ]
 ; Name         Exclusions

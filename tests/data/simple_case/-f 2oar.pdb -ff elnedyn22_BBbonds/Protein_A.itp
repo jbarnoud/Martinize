@@ -3,8 +3,13 @@
 ; Using the following options:  -f 2oar.pdb -ff elnedyn22_BBbonds
 ; Sequence:
 ; MLKGFKEFLARGNIVDLAVAVVIGTAFTALVTKFTDSIITPLINRIGVNAQSDVGILRIGIGGGQTIDLNVLLSAAINFFLIAFAVYFLVVLPYNTLRKKGEVEQPGDTQVVLLTEIRDLLAQTN
-; Secondary Structure:
+; Secondary Structure used internally:
 ; CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+; You can provide the following sring to the -ss option
+; to obtain the same secondary structure:
+; CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+; If you have multiple chains, you would have to
+; concatenate the secondary structure strings.
 
 [ moleculetype ]
 ; Name         Exclusions

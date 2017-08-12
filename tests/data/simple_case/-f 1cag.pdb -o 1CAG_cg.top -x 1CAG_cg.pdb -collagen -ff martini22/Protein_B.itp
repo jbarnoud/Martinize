@@ -3,8 +3,13 @@
 ; Using the following options:  -f 1cag.pdb -o 1CAG_cg.top -x 1CAG_cg.pdb -collagen -ff martini22
 ; Sequence:
 ; POGPOGPOGPOGPOAPOGPOGPOGPOGPOG
-; Secondary Structure:
+; Secondary Structure used internally:
 ; FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+; You can provide the following sring to the -ss option
+; to obtain the same secondary structure:
+; FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+; If you have multiple chains, you would have to
+; concatenate the secondary structure strings.
 
 [ moleculetype ]
 ; Name         Exclusions

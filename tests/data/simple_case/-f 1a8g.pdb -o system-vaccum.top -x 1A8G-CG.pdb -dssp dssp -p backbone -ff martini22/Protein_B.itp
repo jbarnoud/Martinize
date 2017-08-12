@@ -3,8 +3,13 @@
 ; Using the following options:  -f 1a8g.pdb -o system-vaccum.top -x 1A8G-CG.pdb -dssp dssp -p backbone -ff martini22
 ; Sequence:
 ; PQITLWQRPLVTIKIGGQLKEALLDTGADDTVLEEMNLPGRWKPKMIGGIGGFIKVRQYDQILIEICGHKAIGTVLVGPTPVNIIGRNLLTQIGCTLNF
-; Secondary Structure:
+; Secondary Structure used internally:
 ; CCCCSSSCCEEEEEETTEEEEEEECTTCSSCEECSCCCCSCCEEEEEEETTEEEEEEEEEEEEEEETTEEEEEEEEESCCSSCEEC3333TTTTCCCCC
+; You can provide the following sring to the -ss option
+; to obtain the same secondary structure:
+; ~~~~SSS~~EEEEEETTEEEEEEE~TT~SS~EE~S~~~~S~~EEEEEEETTEEEEEEEEEEEEEEETTEEEEEEEEES~~SS~EE~HHHHTTTT~~~~~
+; If you have multiple chains, you would have to
+; concatenate the secondary structure strings.
 
 [ moleculetype ]
 ; Name         Exclusions

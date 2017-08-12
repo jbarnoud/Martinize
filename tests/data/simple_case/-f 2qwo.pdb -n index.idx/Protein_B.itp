@@ -3,8 +3,13 @@
 ; Using the following options:  -f 2qwo.pdb -n index.idx
 ; Sequence:
 ; DPEKLKILEWIEGKERNIRALLSTMHTVLWAGETKWKPVGMADLVTPEQVKKVYRKAVLVVHPCKATGQPYEQYAKMIFMELNDAWSEFENQ
-; Secondary Structure:
+; Secondary Structure used internally:
 ; CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+; You can provide the following sring to the -ss option
+; to obtain the same secondary structure:
+; CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
+; If you have multiple chains, you would have to
+; concatenate the secondary structure strings.
 
 [ moleculetype ]
 ; Name         Exclusions
