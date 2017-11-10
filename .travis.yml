@@ -35,7 +35,7 @@ jobs:
                    cd maintainers \
                    && ./zippackage.sh \
                    && ./martinize -h \
-                   && ./marinize -f ../tests/data/inputs/1ubq/1ubq.pdb -x test.pdb
+                   && ./martinize -f ../tests/data/inputs/1ubq/1ubq.pdb -x test.pdb
        - stage: deploy
          install: skip
          script: "./maintainers/travis_zip.sh"
