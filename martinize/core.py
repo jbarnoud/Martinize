@@ -22,6 +22,7 @@ import sys, logging, random, math, os, re
 from . import IO, topology, elastic, functions, mapping
 from .converters import Link
 from .ForceFields import forcefield
+from . import utils
 
 
 def write_structure(ostream, model, title, box, chains, order):
@@ -548,7 +549,7 @@ def main(options):
     # The following lines are always printed (if no errors occur).
     print "\n\tThere you are. One MARTINI. Shaken, not stirred.\n"
 
-    Q = random.choice(open(os.path.join(os.path.dirname(__file__), "quotes.txt")).readlines()).split('::')
+    Q = random.choice(list(utils.iter_resource("quotes.txt"))).split('::')
     print "\n", Q[1].strip(), "\n%80s" % ("--"+Q[0].strip()), "\n"
 
     return 0

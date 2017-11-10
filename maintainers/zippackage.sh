@@ -21,7 +21,8 @@ rsync -ruv ../* build \
     --exclude='tests' \
     --exclude='maintainers' \
     --exclude='*.egg-info' \
-    --exclude='setup.py'
+    --exclude='setup.py' \
+    --exclude='*.pyc'
 cd build
 
 # Download simopt
@@ -46,7 +47,7 @@ EOF
 zip -r martinize.zip *
 
 # Make it executable
-echo '#!/usr/bin/env python' | cat - martinize.zip > package
+echo '#!/usr/bin/env python2' | cat - martinize.zip > package
 chmod +x package
 
 # Clean the mess
